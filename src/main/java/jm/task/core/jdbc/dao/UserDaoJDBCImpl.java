@@ -24,8 +24,8 @@ public class UserDaoJDBCImpl implements UserDao {
                 "DEFAULT CHARACTER SET = utf8;\n";
 
         try(Connection conn = Util.getConnection();
-            PreparedStatement preparedStatementstatement = conn.prepareStatement(query)) {
-            preparedStatementstatement.executeUpdate();
+            PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+            preparedStatement.executeUpdate();
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
